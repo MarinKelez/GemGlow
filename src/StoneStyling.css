@@ -1,0 +1,205 @@
+.Rose-Quartz, .Rose-Quartz-focus {
+    background-color:#F7CACA;
+    color: hsla(0, 0%, 100%, 0.865);
+}
+.Rose-Quartz-buy {
+  background-color: #efd8d8;
+}
+.Rose-Quartz:hover {
+    background-color:#f39696;
+}
+.Rose-Quartz:hover header {
+    background-color:#f85a5a;
+}
+.Amethyst, .Amethyst-focus {
+    background-color: #9966CC;
+    color:#5D2E8C;
+  }
+.Amethyst-buy {
+  background-color: #c0a3d1;
+}
+.Amethyst:hover {
+        background-color:#7E4E9D;
+    }
+.Tigers-Eye, .Tigers-Eye-focus {
+    background-color: #D17F3B;
+    color: #8B5A2B;
+  }
+.Tigers-Eye-buy {
+  background-color: #ab7532;
+}
+.Tigers-Eye:hover {
+    background-color:#a76f30;
+  }
+.Lapis-Lazuli, .Lapis-Lazuli-focus {
+    background-color: #1E3A5F;
+    color: #F1C40F;
+  }
+.Lapis-Lazuli-buy {
+  background-color: #2c4f8e;
+}
+.Lapis-Lazuli:hover {
+        background-color:#2c4f8e;
+    }
+.Obsidian, .Obsidian-focus {
+    background-color: #3B3B3D;
+    color: #D3D3D3;
+  }
+.Obsidian-buy {
+  background-color: #4a4a4c;
+}
+.Obsidian:hover {
+        background-color:#4a4a4c;
+    }
+.Turquoise, .Turquoise-focus {
+    background-color: #30D5C8;
+    color: #008E89;
+  }
+.Turquoise-buy {
+  background-color: #5acaa9;
+}
+.Turquoise:hover {
+        background-color:#2abbb0;
+    }
+.Sapphire, .Sapphire-focus {
+    background-color: #0F52BA;
+    color: #082567;
+  }
+.Sapphire-buy { 
+  background-color: #0d3f8e;
+}
+.Sapphire:hover {
+        background-color:#0d3f8e;
+        color: #2667ce;
+    }
+.Aquamarine, .Aquamarine-focus {
+    background-color: #7FFFD4;
+    color: #28b4c7;
+  }
+.Aquamarine-buy {
+  background-color: #5be8be;
+}
+.Aquamarine:hover {
+        background-color:#62d9eb;
+    }
+.Citrine, .Citrine-focus {
+    background-color: #E4A30B;
+    color: #D17C15;
+  }
+.Citrine-buy {
+  background-color: #e6b21b;
+}
+.Citrine:hover {
+        background-color:#ecc559;
+    }
+.Garnet, .Garnet-focus {
+    background-color: #9f1b38;
+    color: #b4434b;
+  }
+.Garnet-buy {
+  background-color: #c83051;
+  color:#6a0e15;
+}
+.Garnet:hover {
+        background-color:#c83051;
+    }
+.Malachite, .Malachite-focus {
+    background-color: #0B6E4F;
+    color: #6aca90;
+  }
+.Malachite-buy {
+  background-color: #0a5b41;
+}
+.Malachite:hover {
+        background-color:#0a5b41;
+    }
+.Moonstone, .Moonstone-focus {
+    background-color: #A5C4E7;
+    color: #F4F4F8;
+  }
+.Moonstone-buy {
+  background-color: #9090f4;
+}
+.Moonstone:hover {
+        background-color:#9090f4;
+    }
+.Jade, .Jade-focus {
+    background-color: #98FB98;
+    color: #00A86B;
+  }
+.Jade-buy {
+  background-color: #5acaa9;
+}
+.Jade:hover {
+        background-color:#00935a;
+    }
+.Opal, .Opal-focus {
+    background-color: #4b40ed;
+    color: #3599cb;
+  }
+.Opal-buy {
+  background-color: #2f24cb;
+}
+.Opal:hover {
+        background-color:#e6e6e0;
+    }
+.Peridot, .Peridot-focus {
+    background-color: #B4D330;
+    color: #7A9B23;
+  }
+.Peridot-buy {
+  background-color: #96ab22;
+}
+.Peridot:hover {
+        background-color:#96ab22;
+    }
+.Ruby, .Ruby-focus {
+    background-color: #9B111E;
+    color: #e0373f;
+  }
+.Ruby-buy {
+  background-color: #7f0d17;
+}
+.Ruby:hover {
+        background-color:#7f0d17;
+    }
+.Topaz, .Topaz-focus {
+    background-color: #EAA221;
+    color: #D17C15;
+  }
+.Topaz-buy {
+  background-color: #e6b21b;
+}
+.Topaz:hover {
+        background-color:#fbc52f;
+    }
+.Spinel, .Spinel-focus {
+    background-color: #F28B8C;
+    color: #ea4346;
+  }
+.Spinel-buy {
+  background-color: #efa3a5;
+} 
+.Spinel:hover {
+        background-color:#7f1525;
+    }
+.Chrysoprase, .Chrysoprase-focus {
+    background-color: #7FFFD4;
+    color: #4E9F63;
+  }
+.Chrysoprase-buy {
+  background-color: #5acaa9;
+}
+.Chrysoprase:hover {
+        background-color:#5acaa9;
+    }
+.Labradorite, .Labradorite-focus {
+    background-color: #2A5C46;
+    color: #5F8B8C;
+  }
+.Labradorite-buy {
+  background-color: #337e5e;
+}
+.Labradorite:hover {
+        background-color:#14ae57;
+    }

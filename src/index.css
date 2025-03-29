@@ -1,0 +1,169 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body {
+  background-color: #121212;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+.header {
+  padding: 10px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display:flex;
+  align-items: center;
+}
+.header i, .header h4 {
+  padding: 0 10px;
+}
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+  padding: 20px;
+}
+span {
+  float:left;
+  padding:10px;
+}
+span:hover {
+  cursor:pointer;
+}
+ul {
+  list-style-type: none;
+  padding: 10px 0;
+}
+li {
+  text-decoration: solid;
+}
+p {
+  padding:10px;
+}
+li {
+  padding:5px;
+}
+.description {
+  width:40%;
+  margin:0 auto;
+  padding:10px;
+  text-align: center;
+}
+hr {
+  color:rgba(71, 66, 66, 0.947)
+}
+.gem-cards {
+  width:80%;
+  margin:30px auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.gem-card {
+  width:30%;
+  padding-top:20px;
+  margin:10px;
+  border-radius:10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: background-color 0.5s;
+}
+.focused-gem-container {
+  width: 50%;
+  height:42vw;
+  margin:0 auto;
+  padding:10px;
+  display:flex;
+  align-items: center;
+}
+.gem-card-focused {
+  width:70%;
+  margin:40px auto;
+  padding-top:10px;
+  padding-bottom:-20px;
+  border-radius:10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: background-color 0.5s;
+}
+.gem-card-focused hr {
+  color:white;
+}
+#flex-focus {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.gem-card-image {
+  height:100px;
+}
+.gem-card-image img {
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  margin:0 auto;
+  margin-bottom:-10px;
+}
+.gem-card-content {
+  padding:30px;
+}
+.gem-card-content-focus {
+  width:40%;
+  padding:30px;
+}
+.flex-focus {
+  display: flex;
+  justify-content: space-between;
+}
+.shopping-cart {
+  position:absolute;
+  top: 60px;
+  right: 0;
+  padding:20px 60px;
+  border-radius: 10px;
+  z-index: 2;
+  background-color: white;
+  color:black;
+}
+.shopping-cart li {
+  padding:10px;
+}
+.shopping-cart button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #121212;
+  color: white;
+  border: none;
+  margin-top:10px;
+  cursor:pointer;
+}
+.gem-card-content button, .gem-card-content-focus button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  margin-top:20px;
+  cursor:pointer;
+}
+.buy-box {
+  background-color: black;
+  width:70%;
+  margin:0 auto;
+  padding:10px;
+  border-radius: 10px;
+}
+.buy-box input {
+  width:15%;
+  margin-top:10px;
+}
+.gem-card-content h1, .gem-card-content-focus h1 {
+  padding:5px;
+}
+.gem-card-content-focus h2 {
+  padding-bottom:5px;
+}
+.focused-image {
+  width:50%;
+  height:50%;
+}
