@@ -1,7 +1,8 @@
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
+import Filter from './Filter.jsx';
 import Description from './Descriptions.jsx';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './StoneStyling.css';
 
 function GemCards() {
@@ -13,6 +14,7 @@ function GemCards() {
         description: "Amethyst is a stunning violet gemstone known for its calming and spiritual properties. It has been used for centuries to promote relaxation, intuition, and emotional balance. Found mainly in Brazil and Uruguay, this quartz variety is often associated with wisdom and protection.",
         benefits: ["Calming", "Stress relief", "Enhances intuition"],
         color: "#9966CC",
+        filterColor: "Purple",
         background: "#E6CCFF",
         price: 40
     },
@@ -23,6 +25,7 @@ function GemCards() {
         description: "Rose Quartz is a soft pink gemstone symbolizing love, compassion, and emotional healing. It is believed to promote self-love, strengthen relationships, and bring inner peace. Found in places like Madagascar and Brazil, this crystal is often used in jewelry and meditation practices.",
         benefits: ["Self-love", "Emotional healing", "Relationships"],
         color: "#F7CACA",
+        filterColor: "Pink",
         background: "#FFF5F5",
         price: 35
     },
@@ -33,6 +36,7 @@ function GemCards() {
         description: "Tiger's Eye is a golden-brown gemstone known for its chatoyant, silky luster and bold energy. It is believed to enhance confidence, willpower, and protection against negativity. Found in South Africa and Australia, this stone has been used for centuries as a talisman of strength and courage.",
         benefits: ["Boosts confidence", "Brings protection", "Enhances willpower"],
         color: "#D17F3B",
+        filterColor: "Brown",
         background: "#4B2C20",
         price: 50
     },
@@ -43,6 +47,7 @@ function GemCards() {
         description: "Lapis Lazuli is a deep blue metamorphic rock speckled with golden pyrite, symbolizing wisdom and truth. Revered since ancient times, it was used in Egyptian jewelry and Renaissance paintings. This stone is believed to enhance self-expression, mental clarity, and spiritual insight.",
         benefits: ["Encourages wisdom", "Self-expression", "Clarity"],
         color: "#1E3A5F",
+        filterColor: "Blue",
         background: "#F5F5F5",
         price: 70
     },
@@ -53,6 +58,7 @@ function GemCards() {
         description: "Obsidian is a volcanic glass known for its smooth, dark surface and powerful protective properties. Used throughout history for tools and spiritual protection, it is believed to shield against negativity and promote emotional grounding. This stone is often associated with self-reflection, transformation, and inner strength.",
         benefits: ["Shields against negativity", "Promotes grounding"],
         color: "#3B3B3D",
+        filterColor: "Black",
         background: "#2c2c2c",
         price: 55
     },
@@ -63,6 +69,7 @@ function GemCards() {
         description: "Citrine is a vibrant yellow to golden-brown variety of quartz known for its sunny energy and abundance-attracting properties. Often called the merchant's stone, it is believed to bring wealth, success, and creativity. This bright gemstone is also thought to promote joy, positivity, and warmth in one's life.",
         benefits: ["Attracts wealth", "Creativity", "Positivity"],
         color: "#E4A30B",
+        filterColor: "Yellow",
         background: "#FFF8DC",
         price: 60
     },
@@ -73,6 +80,7 @@ function GemCards() {
         description: "Turquoise is a striking blue-green gemstone cherished for its beauty and protective qualities. It has been used for centuries in jewelry and as a symbol of wealth, health, and communication. Known for its calming energy, turquoise is also believed to bring good fortune and healing.",
         benefits: ["Brings good fortune", "Healing", "Communication"],
         color: "#30D5C8",
+        filterColor: "Blue",
         background: "#008E89",
         price: 45
     },
@@ -83,6 +91,7 @@ function GemCards() {
         description: "Jade is a precious green gemstone symbolizing prosperity, harmony, and good fortune. It has been highly valued in many cultures, particularly in East Asia, where it represents wisdom and peace. Known for its soothing energy, jade is believed to promote emotional balance and enhance physical healing.",
         benefits: ["Promotes peace", "Wisdom", "Emotional balance"],
         color: "#98FB98",
+        filterColor: "Green",
         background: "#00A86B",
         price: 80
     },
@@ -93,6 +102,7 @@ function GemCards() {
         description: "A pearly stone associated with the moon and feminine energy.Moonstone is a mystical gemstone known for its pearly sheen and connection to the moon. It is believed to enhance intuition, emotional stability, and bring about positive transformation. Often associated with feminine energy, moonstone is thought to promote calmness and inspire creativity.",
         benefits: ["Enhances intuition", "Fertility",  "Emotional stability"],
         color: "#A5C4E7",
+        filterColor: "Blue",
         background: "#F4F4F8",
         price: 90
     },
@@ -103,6 +113,7 @@ function GemCards() {
         description: "Garnet is a deep red gemstone known for its strength and vibrant color. It is believed to enhance energy, passion, and vitality, while also offering protection. Often associated with love and commitment, garnet is also thought to bring courage and confidence.",
         benefits: ["Boosts energy", "Passion", "Protection"],
         color: "#9f1b38",
+        filterColor: "Red",
         background: "#b4434b",
         price: 85
     },
@@ -113,6 +124,7 @@ function GemCards() {
         description: "Aquamarine is a pale blue-green gemstone that symbolizes tranquility and calmness. Often linked to the sea, it is believed to promote clarity, courage, and emotional balance. Aquamarine is also thought to enhance communication and bring peace to its wearer.",
         benefits: ["Encourages clarity", "Calmness", "Courage"],
         color: "#7FFFD4",
+        filterColor: "Blue",
         background: "#28b4c7",
         price: 95
     },
@@ -123,6 +135,7 @@ function GemCards() {
         description: "Malachite is a vibrant green gemstone known for its striking, swirling patterns. It is believed to absorb negative energy and promote healing, making it a powerful stone for emotional and physical balance. Malachite is also associated with transformation, protection, and growth.",
         benefits: ["Absorbs negativity","Boosts transformation", "Healing"],
         color: "#0B6E4F",
+        filterColor: "Green",
         background: "#6aca90",
         price: 110
     },
@@ -133,6 +146,7 @@ function GemCards() {
         description: "Sapphire is a precious gemstone typically known for its rich blue color, though it can come in various shades. It symbolizes wisdom, loyalty, and nobility, often believed to bring mental clarity and focus. Sapphires are also said to offer protection, fostering truth and serenity.",
         benefits: ["Enhances mental focus", "Truth", "Protection"],
         color: "#0F52BA",
+        filterColor: "Blue",
         background: "#2667ce",
         price: 150
     },
@@ -143,6 +157,7 @@ function GemCards() {
         description: "Ruby is a vibrant red gemstone, symbolizing love, passion, and vitality. It is believed to enhance energy, confidence, and courage, making it a powerful stone for those seeking strength and motivation. Rubies are also associated with protection, offering spiritual and physical safety to their wearer.",
         benefits: ["Promotes confidence", "Vitality", "Protection"],
         color: "#9B111E",
+        filterColor: "Red",
         background: "#ca2931",
         price: 120
     },
@@ -153,6 +168,7 @@ function GemCards() {
         description: "Topaz is a gemstone known for its vibrant colors, ranging from golden yellow to blue, symbolizing abundance and success. It is believed to bring joy, generosity, and positive energy to its wearer. Topaz is also thought to enhance creativity, clarity, and personal growth.",
         benefits: ["Encourages joy", "Generosity", "Success"],
         color: "#EAA221",
+        filterColor: "Yellow",
         background: "#D17C15",
         price: 75
     },
@@ -163,6 +179,7 @@ function GemCards() {
         description: "Opal is a striking gemstone known for its iridescence, displaying a play of colors that change with the light. It is often associated with creativity, spontaneity, and emotional depth. Opal is believed to enhance intuition and provide a sense of inspiration and freedom.",
         benefits: ["Enhances creativity", "Spontaneity", "Emotional depth"],
         color: "#4b40ed",
+        filterColor: "Blue",
         background: "#e67759",
         price: 130
     },
@@ -173,6 +190,7 @@ function GemCards() {
         description: "Peridot is a bright green gemstone formed from volcanic activity, known for its vibrant and lively color. It symbolizes prosperity, happiness, and confidence, often believed to bring good fortune to its wearer. This stone is also associated with emotional healing and a sense of renewal.",
         benefits: ["Brings prosperity", "Happiness", "Confidence"],
         color: "#B4D330",
+        filterColor: "Green",
         background: "#7A9B23",
         price: 50
     },
@@ -183,6 +201,7 @@ function GemCards() {
         description: "Spinel is a gemstone that comes in a variety of colors, often mistaken for ruby due to its similar red hue. Known for its brilliance and durability, it symbolizes rejuvenation, inspiration, and energy. Spinel is often used to promote vitality and a sense of balance in life.",
         benefits: ["Promotes rejuvenation", "Inspiration", "Energy"],
         color: "#F28B8C",
+        filterColor: "Red",
         background: "#ea4346",
         price: 60
     },
@@ -193,6 +212,7 @@ function GemCards() {
           description: "Chrysoprase is a vibrant green gemstone often associated with emotional healing and balance. It is believed to promote joy, positivity, and emotional stability while encouraging growth and renewal. Known for its smooth, calming color, chrysoprase is thought to enhance personal relationships and foster emotional well-being.",
           benefits: ["Encourages emotional balance", "Joy", "Healing"],
           color: "#7FFFD4",
+          filterColor: "Blue",
           background: "#4E9F63",
           price: 70
         },
@@ -203,6 +223,7 @@ function GemCards() {
           description: "Labradorite is a mystical gemstone known for its iridescent play of colors, often showcasing shades of blue, green, and gold. It is believed to enhance intuition, bring about transformation, and provide protection from negative energies. The stone is also thought to stimulate creativity and help one connect with higher spiritual realms.",
           benefits: ["Boosts intuition", "Transformation", "Protection"],
           color: "#2A5C46",
+          filterColor: "Green",
           background: "#5F8B8C",
           price: 50
         }
@@ -210,6 +231,8 @@ function GemCards() {
 
     const [cartContent, setCartContent] = useState([]);  
     const [focusedStone, setFocusedStone] = useState(null);
+    const [filterCriteria, setFilterCriteria] = useState({});
+    const [filteredGemCards, setFilteredGemCards] = useState([]);
 
     function addToCart(event) {
       if(document.getElementById("amount").value === "") {
@@ -271,6 +294,9 @@ function GemCards() {
         );
     }
 
+    const getCountries = () => [...new Set(gemStones.flatMap(stone => stone.origin.split(", ")))];
+    const getNames = () => gemStones.map(stone => stone.name);
+
     function clearFocus() {
       setFocusedStone(null);
     }
@@ -282,14 +308,31 @@ function GemCards() {
       setFocusedStone(filteredGem);
     }
 
-    const gemCards = gemStones.map((gem) => createCard(gem));
+    useEffect(() => {
+        let filtered = gemStones;
+
+        if ("name" in filterCriteria) {
+            filtered = gemStones.filter(gem => gem.name === filterCriteria.name);
+        } else if ("price" in filterCriteria) {
+            filtered = gemStones.filter(gem => 
+                gem.price >= filterCriteria.price[0] && gem.price <= filterCriteria.price[1]
+            );
+        } else if ("origin" in filterCriteria) {
+            filtered = gemStones.filter(gem => gem.origin.split(", ").includes(filterCriteria.origin));
+        } else if ("color" in filterCriteria) {
+            filtered = gemStones.filter(gem => gem.filterColor === filterCriteria.color);
+        }
+
+        setFilteredGemCards(filtered.map(gem => createCard(gem)));
+    }, [filterCriteria]);
    
     return(
       <>
         {focusedStone ? <Header background={focusedStone.color} cart={cartContent} /> : <Header background="#1A1A2E" cart={cartContent} />}
         {focusedStone ? null : <Description />} 
+        {focusedStone ? null : <Filter names={getNames()} origins={getCountries()} filterCriteria={filterCriteria} setFilterCriteria={setFilterCriteria} />}
         <div className={focusedStone ? "focused-gem-container" : "gem-cards"} style={focusedStone ? {backgroundColor: focusedStone.background, width:"100%"} : null}>
-          {focusedStone ? createFocusedCard(focusedStone) : gemCards}
+          {focusedStone ? createFocusedCard(focusedStone) : filteredGemCards}
         </div>
         {focusedStone ? null : <Footer background="#1A1A2E" />}
       </>
